@@ -1,3 +1,7 @@
+CREATE DATABASE IF NOT EXISTS nexora_ujian
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE nexora_ujian;
+
 CREATE TABLE pengguna (
   id_pengguna    INT AUTO_INCREMENT PRIMARY KEY,
   nama           VARCHAR(100) NOT NULL,
