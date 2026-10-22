@@ -1,3 +1,4 @@
+[CREATE]
 INSERT INTO pengguna (nama, email, password_hash, status_aktif) VALUES
  ('Peter Parker',  'peter123@nexora.test', 'placeholder_hash_01', 1),
  ('Tony Stark', 'tonytony@nexora.test', 'placeholder_hash_02', 1),
@@ -12,3 +13,15 @@ INSERT INTO sesi_login (id_pengguna, id_perangkat, waktu_login, waktu_logout) VA
  (1, 1, '2026-10-15 08:00:00', '2026-10-15 09:30:00'),
  (2, 3, '2026-10-15 09:15:00', NULL),
  (3, 2, '2026-10-15 10:00:00', NULL);
+
+[READ]
+SELECT * FROM pengguna;
+
+[UPDATE]
+UPDATE sesi_login
+SET waktu_logout = '2026-10-15 11:00:00'
+WHERE id_sesi = 2;
+
+[DELETE]
+DELETE FROM sesi_login
+WHERE id_sesi = 1;
